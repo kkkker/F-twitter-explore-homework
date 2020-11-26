@@ -1,3 +1,23 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  border-bottom: 2px $border-color solid;
+
+  .login-btn {
+    @include button($primary-color, $body-bg, $header-button-width);
+  }
+
+  .register-btn {
+    @include button($white, $primary-color, 100px);
+  }
+}
+
+.content {
+  flex: 1;
+}
