@@ -14,10 +14,49 @@
   }
 
   .register-btn {
-    @include button($white, $primary-color, 100px);
+    @include button($white, $primary-color, $header-button-width);
   }
 }
 
 .content {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .content-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px $border-color solid;
+    border-radius: 10px;
+    padding: 40px;
+  }
+
+  .content-form input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: $body-bg;
+    border: none;
+    border-bottom: 2px $border-color solid;
+  }
+
+  .forget-password {
+    width: 100%;
+    margin-bottom: 30px;
+
+    & a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+
+  .login-btn {
+    @include button($primary-color, $body-bg, 100%);
+  }
+
+  .register-btn {
+    @include button($white, $primary-color, 100%);
+  }
 }
